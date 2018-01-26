@@ -1,0 +1,24 @@
+# Maintainer: liberodark
+
+pkgname=quick-n-easy-web-builder
+pkgver=4.2.8
+pkgrel=1
+pkgdesc="An Web builder"
+arch=('x86_64')
+url="http://www.quickandeasywebbuilder.com/"
+license=('Custom')
+depends=('xdg-utils' 'awesome-terminal-fonts')
+source_x86_64=("http://www.quickandeasywebbuilder.com/quick-n-easy-web-builder-4_4.2.8_i386.deb")
+source=($pkgname.desktop
+        $pkgname.png)
+sha512sums=('53a1e71ff46ba7736fccbacc7686bde3345cf0b2077617dd8161e99b523d908798bf5d356ab97f610dd9059b81502b8bd4832fd86a399ca3956f2b2c6a1b708d'
+         '95ce14bdb41aeb1169e6d0c811177b65a69f2b067e9c25e95d571a21ae8a894c158382c266195296d254c9ebd041ae480a0e72b1c8d9f6b536432bf2cd17401b')
+sha512sums_x86_64=('3fcd57ce739ff706563d2ff0cfcd7a0326d2fdf86182ddc8943e0b8023e0a574c25488fbde6c318b75cd8863eaa7ab9bc872b07a3a075f959054128ffd2925f2')
+        
+package() {
+  cd $srcdir
+  tar xvf data.tar.xz
+  cp -r opt $pkgdir
+  install -vDm644 $srcdir/$pkgname.desktop $pkgdir/usr/share/applications/$pkgname.desktop
+  install -vDm644 $srcdir/$pkgname.png $pkgdir/usr/share/pixmaps/$pkgname.png
+}
