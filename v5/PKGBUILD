@@ -1,19 +1,19 @@
 # Maintainer: liberodark
 
-pkgname=quick-n-easy-web-builder
-pkgver=5.3.0
+pkgname=quick-n-easy-web-builder-5
+pkgver=5.4.1
 pkgrel=1
 pkgdesc="An Web builder"
 arch=('x86_64')
 url="http://www.quickandeasywebbuilder.com/"
 license=('Custom')
 depends=('xdg-utils' 'awesome-terminal-fonts')
-source_x86_64=("https://www.quickandeasywebbuilder.com/quick-n-easy-web-builder-5_5.3.0_i386.deb")
+source_x86_64=("https://www.quickandeasywebbuilder.com/quick-n-easy-web-builder-5_${pkgver}_i386.deb")
 source=($pkgname.desktop
         $pkgname.png)
-sha512sums=('bcf377d2eb1514d0bc0207849b6c7e5e1cf962bd2e4fab9e080254df8797fd4345375af86aff5718da593e780fd2aeb32b3da449fde85d644a5f398d1cf0ab1e'
+sha512sums=('7512d1c51dc7190c51f73bbb33924e4563e9b6c4d15464da6a88eafec6b34816d946b725e60c8541407044f7181d67f412be65d00e3cd39b1d9d51f0f31e9e08'
          'a240efc6eb01f3bccddcd5bc4dfa0c91f5ad7ec615293a0832a46c117f9c6e321bc3e25c1d38b7e07577980f2bea85a101105a771130023be6683c0386d46262')
-sha512sums_x86_64=('431e3e81f25d047be2c67f4f4b4f7dc57a3b413a066a7d6a0baf2ea554579ad56189b37961ee45ec56b381ce12fde058e553d163d1ec426bbc0c51cee7e31630')
+sha512sums_x86_64=('2ab93c65ea720461e9117c3b2247159f0a1bdd5459432b68999e52fe2dd15a835a935d63f9d5f9de6d45d10c7cf7cac11fa52f18b5978f5c7acbbb879bc205fa')
         
 package() {
   cd $srcdir
