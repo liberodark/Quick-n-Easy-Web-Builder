@@ -1,0 +1,19 @@
+# Maintainer: liberodark
+
+pkgname=quick-n-easy-web-builder-8
+pkgver=8.0.2
+pkgrel=1
+pkgdesc="An Web builder"
+arch=('x86_64')
+url="http://www.quickandeasywebbuilder.com/"
+license=('Custom')
+depends=('xdg-utils')
+source_x86_64=("https://www.quickandeasywebbuilder.com/quick-n-easy-web-builder-8_${pkgver}_amd64.deb")
+sha256sums_x86_64=('93f775f9c9b89d7d74564b2fc026e40a22b9cf92ad68c7830e4eedc6df213136')
+        
+package() {
+  cd "$srcdir" || exit
+  tar xvf data.tar.xz
+  cp -r opt "$pkgdir"
+  cp -r usr "$pkgdir"
+}

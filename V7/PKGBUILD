@@ -1,0 +1,22 @@
+# Maintainer: liberodark
+
+pkgname=quick-n-easy-web-builder-7
+pkgver=7.4.1
+pkgrel=1
+pkgdesc="An Web builder"
+arch=('x86_64')
+url="http://www.quickandeasywebbuilder.com/"
+license=('Custom')
+depends=('xdg-utils')
+source_x86_64=("http://www.quickandeasywebbuilder.com/qnewb7_linux.zip")
+sha512sums_x86_64=('d69d8ac1ec764ef5e800f5f480c6012503dd9fa602201d193b44d94423ac8fab')
+        
+package() {
+  cd $srcdir
+  unzip qnewb7_linux.zip
+  cd qnewb7_linux || exit
+  mkdir 
+  tar xvf data.tar.xz
+  cp -r opt $pkgdir
+  cp -r usr $pkgdir
+}
